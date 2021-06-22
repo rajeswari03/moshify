@@ -347,7 +347,7 @@ a {
   font-style: normal;
   margin-bottom: 0;
 }
-.quote__organisation {
+.quote__organization {
   color: var(--color-headings);
   opacity: 0.4;
   font-size: 2rem;
@@ -364,7 +364,22 @@ a {
   .quote__author {
     font-size: 2.4rem;
   }
-  .quote__organisation {
+  .quote__organization {
     font-size: 1.6rem;
+  }
+}
+
+/*Grids */
+.grid {
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
