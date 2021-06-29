@@ -163,11 +163,18 @@ a {
   text-transform: uppercase;
   text-align: center;
   padding: 2rem 3rem;
+  outline: 0;
   border: 0;
   border-radius: 40px;
   cursor: pointer;
   white-space: nowrap;
   margin: 1rem 0;
+}
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 .btn--primary {
   background: var(--color-primary);
@@ -220,7 +227,7 @@ a {
 .input {
   padding: 1.5rem 3.5rem;
   border: 1px solid var(--color-border);
-  border-radius: 30px;
+  border-radius: 100px;
   outline: 0;
   color: var(--color-headings);
   font-size: 2rem;
@@ -235,8 +242,9 @@ a {
 }
 .input-group .input {
   border: 0;
+
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 .input-group .btn {
   margin: 4px;
@@ -434,7 +442,7 @@ a {
   }
 }
 
-/* Callouts */
+/* Callout */
 .callout {
   padding: 4rem;
   border-radius: 5px;
@@ -474,7 +482,7 @@ a {
     margin: 0 2rem;
   }
 }
-/* Collapsibles */
+/* Collapsible */
 .collapsible__header {
   display: flex;
   justify-content: space-between;
@@ -627,5 +635,30 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+/* Domain Block */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  border-radius: 40px;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem 1fr));
   }
 }
